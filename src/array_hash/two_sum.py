@@ -1,7 +1,20 @@
 # Easy: https:// leetcode.com/problems/two-sum/
 
-# nums map => sort
+
+# nums map, search the complement
 def two_sum(nums: list[int], target: int) -> list[int]:
+    nums_map = {nums[i]: i for i in range(len(nums))}
+
+    for i in range(len(nums)):
+        complement = target - nums[i]
+        if complement in nums_map and nums_map[complement] != i:
+            return list([i, nums_map[complement]])
+
+    return list([-1, -1])
+
+
+# nums map => sort
+def two_sum2(nums: list[int], target: int) -> list[int]:
     # value => index, the index is a set, because we might the same element twice in the input, for example: [3, 3]
     nums_map: dict[int, set[int]] = {}
 
@@ -24,16 +37,3 @@ def two_sum(nums: list[int], target: int) -> list[int]:
             j -= 1
         else:
             i += 1
-
-# nums map, search the complement
-def two_sum2(nums: list[int], target: int) -> list[int]:
-    nums_map: dict[int, int] = {}
-    for i in range(len(nums)):
-        nums_map[nums[i]] = i
-
-    for i in range(len(nums)):
-        complement = target - nums[i]
-        if complement in nums_map and nums_map[complement] != i:
-            return list([i, nums_map[complement]])
-
-    return list([-1, -1])
