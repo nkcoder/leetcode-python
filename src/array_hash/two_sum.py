@@ -1,4 +1,5 @@
 def two_sum(nums: list[int], target: int) -> list[int]:
+    # the value is a set, because we might the same element twice in the input, for example: [3, 3]
     index_map: dict[int, set[int]] = {}
 
     for i in range(len(nums)):
