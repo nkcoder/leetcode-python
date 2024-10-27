@@ -1,18 +1,19 @@
 import unittest
 
 
-from array_hash import valid_anagram
+from array_hash.valid_anagram import valid_anagram, valid_anagram2, valid_anagram3
 
 
-class ValidAnagramTest(unittest.TestCase):
-    def test_valid_anagram(self):
-        self.assertTrue(valid_anagram('anagram', 'nagaram'))
-        self.assertFalse(valid_anagram('rat', 'car'))
+def test_valid_anagram():
+    assert valid_anagram('anagram', 'nagaram') == True
+    assert valid_anagram('rat', 'car') == False
 
-    def test_valid_anagram2(self):
-        self.assertTrue(valid_anagram('anagram', 'nagaram'))
-        self.assertFalse(valid_anagram('rat', 'car'))
 
-    def test_valid_anagram3(self):
-        self.assertTrue(valid_anagram('anagram', 'nagaram'))
-        self.assertFalse(valid_anagram('rat', 'car'))
+def test_valid_anagram2():
+    assert valid_anagram2('anagram', 'nagaram') == True
+    assert valid_anagram2('rat', 'car') == False
+
+
+def test_valid_anagram3():
+    assert valid_anagram3('anagram', 'nagaram') == True
+    assert valid_anagram3('rat', 'car') == False
