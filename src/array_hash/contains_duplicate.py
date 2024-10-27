@@ -1,3 +1,5 @@
+# Easy: https://leetcode.com/problems/contains-duplicate
+
 def contains_duplicate(nums: list[int]) -> bool:
     hashset = set()
     for n in nums:
@@ -5,3 +7,4 @@ def contains_duplicate(nums: list[int]) -> bool:
             return True
         hashset.add(n)
     return False
+

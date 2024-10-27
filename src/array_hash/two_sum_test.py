@@ -1,5 +1,4 @@
-
-from array_hash.two_sum import two_sum
+from two_sum import two_sum
 
 
 def test_two_sum():
