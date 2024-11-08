@@ -3,6 +3,7 @@
 
 # Option 1: sort => for each number => two sum (target - number)
 # Complexity: O(n^2) time, O(n) space
+# nums.sort() might be more efficient than sorted(nums) since it's in-place
 def three_sum(nums: list[int]) -> list[list[int]]:
     nums.sort()
     result: list[list[int]] = []
