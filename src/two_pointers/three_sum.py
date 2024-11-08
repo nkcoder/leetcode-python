@@ -9,9 +9,11 @@ def three_sum(nums: list[int]) -> list[list[int]]:
     result: list[list[int]] = []
 
     for i, n in enumerate(nums):
+        # skip duplicates in the same position
         if i > 0 and n == nums[i - 1]:
             continue
 
+        # two sum with sorted input
         i, j = i + 1, len(nums) - 1
         while i < j:
             sum = n + nums[i] + nums[j]
