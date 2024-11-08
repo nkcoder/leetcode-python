@@ -2,7 +2,7 @@
 
 
 # Option 1: sort => for each number => two sum (target - number)
-# Complexity: O(n^2) time, O(n) space, exceeds time limit
+# Complexity: O(n^2) time, O(n) space
 def three_sum(nums: list[int]) -> list[list[int]]:
     nums.sort()
     result: list[list[int]] = []
