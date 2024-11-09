@@ -26,12 +26,3 @@ def valid_anagram2(s: str, t: str) -> bool:
 
 def valid_anagram3(s: str, t: str) -> bool:
     return Counter(s) == Counter(t)
-
-
-if __name__ == '__main__':
-    assert valid_anagram('anagram', 'nagaram') == True
-    assert valid_anagram('rat', 'car') == False
-    assert valid_anagram2('anagram', 'nagaram') == True
-    assert valid_anagram2('rat', 'car') == False
-    assert valid_anagram3('anagram', 'nagaram') == True
-    assert valid_anagram3('rat', 'car') == False
