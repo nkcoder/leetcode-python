@@ -1,5 +1,7 @@
 # Easy:https://leetcode.com/problems/remove-duplicates-from-sorted-array
 # two-pointers
+
+
 def remove_duplicates_from_sorted_array(nums: list[int]):
     i, j = 0, 1
 
