@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-source venv/bin/activate
+conda activate base
 PYTHONPATH=./src pytest -vv
